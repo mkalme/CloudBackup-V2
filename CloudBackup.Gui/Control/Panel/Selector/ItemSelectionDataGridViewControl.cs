@@ -1,0 +1,68 @@
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+using CustomDialogs;
+
+namespace CloudBackup.Gui {
+    public partial class ItemSelectionDataGridViewControl : IDataGridViewSelectionControl {
+        public DataGridView DataGridView { get; set; }
+        public Func<object, bool> ViewableItemValidator { get; }
+
+        public ViewController ViewController { get; set; }
+
+        public ItemSelectionDataGridViewControl(Func<object, bool> viewableItemValidator) {
+            ViewableItemValidator = viewableItemValidator;
+        }
+
+        public DataGridViewColumn[] CreateColumns() {
+            return new DataGridViewTextBoxColumn[] {
+                new TextAndImageColumn(){
+                    HeaderText = "Name",
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                },
+                new TextAndImageColumn(){
+                    HeaderText = "Id",
+                    AutoSizeMode = DataGridViewAutoSizeColumnMode.None,
+                    AlignmentToRight = true,
+                    Width = 280,
+                    DefaultCellStyle = new DataGridViewCellStyle(){
+                        Font = new Font("Consolas", 9),
+                        ForeColor = Color.FromArgb(190, 190, 190),
+                        Padding = new Padding(4, 1, 0, 0)
+                    }
+                }
+            };
+        }
+
+        //Update
+        private ImageCache _imageCache = new ImageCache();
+
+        public void SetRow(DataGridViewRow row, object item) {
+            if (((Item)item).ID == ItemID.Group) SetGroupRow(row, item as Group);
+            else SetUpdateableItemRow(row, item as UpdateableItem);
+        }
+        private void SetGroupRow(DataGridViewRow row, Group group) {
+            row.SetValues(group.Name, group.GeneratedID);
+            row.DisplayImage(DataGridView.Columns[0], _imageCache.GetImage(group.GetImageChacheKey(), group.GetIcon(), 22, 22), 27);
+        }
+        private void SetUpdateableItemRow(DataGridViewRow row, UpdateableItem item) {
+            row.SetValues(item.Name, item.GeneratedID);
+
+            ((TextAndImageCell)row.Cells[0]).XOffet = item.UpdateableItemID == UpdateableItemID.Folder || item.UpdateableItemID == UpdateableItemID.FilteredFolder ? 4 : 3;
+            row.DisplayImage(DataGridView.Columns[0], _imageCache.GetImage(item.GetImageChacheKey(), item.GetIcon(), 16, 16), 27);
+
+            if (!string.IsNullOrEmpty(item.Password)) {
+                row.DisplayImage(DataGridView.Columns[1], Properties.Resources._16pxKey);
+            }
+        }
+
+        //Double click
+        public void GridDoubleClick(DataGridViewCellEventArgs e, object item) {
+            ItemID id = ((Item)item).ID;
+
+            if (id == ItemID.Group) {
+                ViewController.OpenChild(item as Group);
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudBackup", "CloudBackup\CloudBackup.csproj", "{46047ECF-184B-422C-B4B9-6B0C1A60A84D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudServiceProvider", "CloudServiceProvider\CloudServiceProvider.csproj", "{AE75549C-29AB-4E46-B252-74E5A1ED5453}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CloudServiceProvider", "CloudServiceProvider", "{DD817D93-EA64-4D99-8FDC-16640537FBF9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudServiceProvider.GoogleCloud", "CloudServiceProvider.GoogleCloud\CloudServiceProvider.GoogleCloud.csproj", "{EC86B3DA-8402-4CAC-B4C2-C87461DED1CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudBackup.Gui", "CloudBackup.Gui\CloudBackup.Gui.csproj", "{FDCF97E7-02AA-4992-9B29-6FA4FE68E1C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46047ECF-184B-422C-B4B9-6B0C1A60A84D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46047ECF-184B-422C-B4B9-6B0C1A60A84D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46047ECF-184B-422C-B4B9-6B0C1A60A84D}.Debug|x64.ActiveCfg = Debug|x64
+		{46047ECF-184B-422C-B4B9-6B0C1A60A84D}.Debug|x64.Build.0 = Debug|x64
+		{46047ECF-184B-422C-B4B9-6B0C1A60A84D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46047ECF-184B-422C-B4B9-6B0C1A60A84D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46047ECF-184B-422C-B4B9-6B0C1A60A84D}.Release|x64.ActiveCfg = Release|x64
+		{46047ECF-184B-422C-B4B9-6B0C1A60A84D}.Release|x64.Build.0 = Release|x64
+		{AE75549C-29AB-4E46-B252-74E5A1ED5453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE75549C-29AB-4E46-B252-74E5A1ED5453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE75549C-29AB-4E46-B252-74E5A1ED5453}.Debug|x64.ActiveCfg = Debug|x64
+		{AE75549C-29AB-4E46-B252-74E5A1ED5453}.Debug|x64.Build.0 = Debug|x64
+		{AE75549C-29AB-4E46-B252-74E5A1ED5453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE75549C-29AB-4E46-B252-74E5A1ED5453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE75549C-29AB-4E46-B252-74E5A1ED5453}.Release|x64.ActiveCfg = Release|x64
+		{AE75549C-29AB-4E46-B252-74E5A1ED5453}.Release|x64.Build.0 = Release|x64
+		{EC86B3DA-8402-4CAC-B4C2-C87461DED1CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC86B3DA-8402-4CAC-B4C2-C87461DED1CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC86B3DA-8402-4CAC-B4C2-C87461DED1CB}.Debug|x64.ActiveCfg = Debug|x64
+		{EC86B3DA-8402-4CAC-B4C2-C87461DED1CB}.Debug|x64.Build.0 = Debug|x64
+		{EC86B3DA-8402-4CAC-B4C2-C87461DED1CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC86B3DA-8402-4CAC-B4C2-C87461DED1CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC86B3DA-8402-4CAC-B4C2-C87461DED1CB}.Release|x64.ActiveCfg = Release|x64
+		{EC86B3DA-8402-4CAC-B4C2-C87461DED1CB}.Release|x64.Build.0 = Release|x64
+		{FDCF97E7-02AA-4992-9B29-6FA4FE68E1C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDCF97E7-02AA-4992-9B29-6FA4FE68E1C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDCF97E7-02AA-4992-9B29-6FA4FE68E1C5}.Debug|x64.ActiveCfg = Debug|x64
+		{FDCF97E7-02AA-4992-9B29-6FA4FE68E1C5}.Debug|x64.Build.0 = Debug|x64
+		{FDCF97E7-02AA-4992-9B29-6FA4FE68E1C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDCF97E7-02AA-4992-9B29-6FA4FE68E1C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDCF97E7-02AA-4992-9B29-6FA4FE68E1C5}.Release|x64.ActiveCfg = Release|x64
+		{FDCF97E7-02AA-4992-9B29-6FA4FE68E1C5}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AE75549C-29AB-4E46-B252-74E5A1ED5453} = {DD817D93-EA64-4D99-8FDC-16640537FBF9}
+		{EC86B3DA-8402-4CAC-B4C2-C87461DED1CB} = {DD817D93-EA64-4D99-8FDC-16640537FBF9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F12013CC-443B-4EE3-805A-7D6DED12F104}
+	EndGlobalSection
+EndGlobal

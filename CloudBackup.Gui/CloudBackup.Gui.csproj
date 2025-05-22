@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Platforms>AnyCPU;x64</Platforms>
+    <DebugType>none</DebugType>
+    <AssemblyName>Cloud Backup</AssemblyName>
+    <ApplicationIcon>Resources\256pxIcon\_256pxCloudIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\256pxIcon\_256pxCloudIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CloudBackup\CloudBackup.csproj" />
+    <ProjectReference Include="..\CloudProvider.GoogleCloud\CloudServiceProvider.GoogleCloud.csproj" />
+    <ProjectReference Include="..\CloudProvider\CloudServiceProvider.csproj" />
+    <ProjectReference Include="..\CloudServiceProvider.GoogleCloud\CloudServiceProvider.GoogleCloud.csproj" />
+    <ProjectReference Include="..\CloudServiceProvider\CloudServiceProvider.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CommonUtilities">
+      <HintPath>D:\Libraries\.NET Core\CommonUtilities V2\v1.1.0\dlls\64BitRel\CommonUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomDialogs">
+      <HintPath>D:\Libraries\.NET Core\CustomDialogs\v1.4.8\dlls\64BitRel\CustomDialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleBinaryTag">
+      <HintPath>D:\Libraries\.NET Core\SimpleBinaryTag\v1.1.0\dlls\64BitRel\SimpleBinaryTag.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
